@@ -1,0 +1,22 @@
+{
+    "name": "innovator-japan/laravel-extended-validation",
+    "authors": [
+        {
+            "name": "tabtt3",
+            "email": "tabttppp@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "InnovatorJapan\\LaravelExtendedValidation\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InnovatorJapan\\LaravelExtendedValidation\\ValidationServiceProvider"
+            ]
+        }
+    }
+}
