@@ -6,15 +6,13 @@ use Illuminate\Contracts\Validation\Rule;
 
 class Katakana implements Rule
 {
-    public function passes($attribute, $value)
+    public function passes($attribute, $value): bool
     {
-        // TODO: Implement passes() method.
-        return $value === 'hoge';
+        return preg_match('/\A[ァ-ヶー　]*\z/u', $value);
     }
 
-    public function message()
+    public function message(): string
     {
-        // TODO: Implement message() method.
-        return 'The :attribute must be uppercase.';
+        return __('validationRules::messages.katakana');
     }
 }
